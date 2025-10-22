@@ -1,99 +1,214 @@
-<!doctype html>
-<html lang="pt-MZ">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hcb Tech Corporation & Business Lda</title>
-  <meta name="description" content="Hcb Tech Corporation & Business Lda - Soluções tecnológicas e empresariais em Moçambique (Chimoio)." />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--blue:#003366;--green:#00B894;--white:#ffffff;--light:#F5F5F5;--muted:#666;--max-width:1100px;--radius:12px;}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Roboto',sans-serif;color:#222;background:var(--white);line-height:1.5;}
-    header{background:var(--blue);color:var(--white);padding:20px 16px;}
-    .container{max-width:var(--max-width);margin:auto;padding:0 16px;}
-    nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
-    nav a{color:var(--white);margin:0 8px;text-decoration:none;font-weight:500}
-    .btn-cta{background:var(--green);padding:10px 14px;border-radius:10px;color:var(--white);text-decoration:none;font-weight:600}
-    section{padding:40px 0;}
-    .hero{background:linear-gradient(90deg,var(--blue),#044a88);color:var(--white);padding:60px 16px;text-align:center;}
-    .hero h2{font-family:'Montserrat';font-size:28px;margin-bottom:12px}
-    .section-title{font-family:'Montserrat';color:var(--blue);font-size:22px;margin-bottom:16px;text-align:center;}
-    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
-    .card{background:var(--white);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
-    footer{background:var(--blue);color:var(--white);text-align:center;padding:20px;font-size:14px;}
+    :root {
+      --primary: #003366;
+      --accent: #00b894;
+      --background: #ffffff;
+      --text-dark: #1a1a1a;
+      --text-light: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--text-light);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: var(--text-light);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background: linear-gradient(to right, #003366, #005999);
+      color: var(--text-light);
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2.section-title {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: #f8f8f8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      background: var(--primary);
+      color: var(--text-light);
+      text-align: center;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .contact p {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #001f33;
+      color: var(--text-light);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--text-light);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    a.button:hover {
+      background: #00a383;
+    }
   </style>
 </head>
 <body>
-<header>
-  <div class="container">
+  <header>
+    <h1>Hcb Tech Corporation & Business Lda</h1>
     <nav>
-      <div><strong>Hcb Tech Corporation & Business Lda</strong></div>
-      <div>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contactos">Contactos</a>
-      </div>
-      <a class="btn-cta" href="https://wa.me/258874907644" target="_blank">WhatsApp</a>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contactos">Contactos</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section id="inicio" class="hero">
-  <div class="container">
-    <h2>Transformando empresas com tecnologia e estratégia</h2>
-    <p>Na Hcb Tech Corporation & Business Lda, ajudamos organizações em Moçambique a modernizar operações e crescer com inovação.</p>
-  </div>
-</section>
+  <section id="inicio" class="hero">
+    <h2>Soluções tecnológicas e empresariais ao seu alcance</h2>
+    <p>Oferecemos inovação, tecnologia e serviços diversificados para o crescimento da sua empresa e o conforto do seu dia a dia.</p>
+  </section>
 
-<section id="sobre">
-  <div class="container">
-    <h3 class="section-title">Sobre Nós</h3>
-    <div class="card">
-      <p>A <strong>Hcb Tech Corporation & Business Lda</strong> é uma empresa moçambicana focada em soluções tecnológicas e consultoria empresarial. Combinamos inovação, compromisso e estratégia para apoiar o desenvolvimento das organizações.</p>
-      <ul style="margin-top:12px">
-        <li><strong>Missão:</strong> Oferecer soluções tecnológicas acessíveis e eficazes.</li>
-        <li><strong>Visão:</strong> Ser referência nacional em tecnologia e consultoria empresarial.</li>
-        <li><strong>Valores:</strong> Profissionalismo, Compromisso, Inovação, Responsabilidade.</li>
-      </ul>
+  <section id="sobre">
+    <h2 class="section-title">Sobre Nós</h2>
+    <p>A <strong>Hcb Tech Corporation & Business Lda</strong> é uma empresa moçambicana dedicada a fornecer soluções tecnológicas, comerciais e de consultoria. Nosso objetivo é simplificar a vida dos clientes e impulsionar negócios por meio da inovação e da qualidade.</p>
+  </section>
+
+  <section id="servicos">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>📱 Venda de Celulares</h3>
+        <p>Comercializamos diversos modelos de smartphones e acessórios de qualidade.</p>
+      </div>
+      <div class="service-card">
+        <h3>🛍️ Venda de Varejo de Moda</h3>
+        <p>Oferecemos roupas, calçados e artigos de moda para todos os estilos.</p>
+      </div>
+      <div class="service-card">
+        <h3>🍞 Venda de Produtos Alimentares</h3>
+        <p>Fornecemos produtos alimentares variados com qualidade e confiança.</p>
+      </div>
+      <div class="service-card">
+        <h3>⚡ Material Eléctrico e Instalações</h3>
+        <p>Fornecemos materiais eléctricos e prestamos serviços de instalação com segurança e eficiência.</p>
+      </div>
+      <div class="service-card">
+        <h3>💻 Consultoria Informática</h3>
+        <p>Ajudamos empresas e particulares a implementar soluções tecnológicas eficientes.</p>
+      </div>
+      <div class="service-card">
+        <h3>🖨️ Digitação e Impressão</h3>
+        <p>Serviços rápidos e profissionais de digitação, cópia e impressão.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="servicos" style="background:var(--light)">
-  <div class="container">
-    <h3 class="section-title">Serviços</h3>
-    <div class="grid">
-      <div class="card"><h4>💻 Desenvolvimento de Software</h4><p>Criação de sistemas personalizados e aplicações de gestão.</p></div>
-      <div class="card"><h4>🔧 Assistência Técnica em TI</h4><p>Manutenção e suporte técnico para computadores e redes.</p></div>
-      <div class="card"><h4>☁️ Soluções em Nuvem</h4><p>Backup, armazenamento e segurança de dados.</p></div>
-      <div class="card"><h4>📊 Consultoria Empresarial</h4><p>Planeamento estratégico e digitalização de processos.</p></div>
-      <div class="card"><h4>🛠️ Instalação e Manutenção</h4><p>Infraestrutura tecnológica completa e suporte contínuo.</p></div>
+  <section id="contactos">
+    <h2 class="section-title">Contactos</h2>
+    <div class="contact">
+      <p>📍 Localização: Moçambique, Província de Manica, Cidade de Chimoio</p>
+      <p>📞 Contacto: 874907644</p>
+      <p>📧 Email: hcbtechcorporationbusinesslda@gmail.com</p>
+      <a href="https://wa.me/258874907644" class="button">💬 Fale Connosco no WhatsApp</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contactos">
-  <div class="container">
-    <h3 class="section-title">Contactos</h3>
-    <div class="card">
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/258874907644" target="_blank">+258 874 907 644</a></p>
-      <p><strong>Email:</strong> <a href="mailto:hcbtechcorporationbusinesslda@gmail.com">hcbtechcorporationbusinesslda@gmail.com</a></p>
-      <p><strong>Localização:</strong> Moçambique, Província de Manica, Cidade de Chimoio</p>
-      <p><strong>Redes Sociais:</strong></p>
-      <ul>
-        <li><a href="https://facebook.com/hcbtechcorporationbusinesslda" target="_blank">Facebook</a></li>
-        <li><a href="https://instagram.com/hcbtechcorporationbusinesslda" target="_blank">Instagram</a></li>
-        <li><a href="https://linkedin.com/company/hcbtechcorporationbusinesslda" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2025 Hcb Tech Corporation & Business Lda — Todos os direitos reservados.<br>
-  Desenvolvido por Hcb Tech.
-</footer>
+  <footer>
+    <p>© 2025 Hcb Tech Corporation & Business Lda — Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
